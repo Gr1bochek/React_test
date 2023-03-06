@@ -7,7 +7,7 @@ import ProductList from './components/ProductList/ProductList';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import AddProduct from './components/AddProduct/AddProduct';
-import EditdProduct from './components/EditProduct/EditProduct';
+import EditProduct from './components/EditProduct/EditProduct';
 
 function App() {
 
@@ -37,18 +37,10 @@ function App() {
         <Routes>
           <Route path='/' element={<ProductList products={products} deleteProduct={deleteProduct}/>}>
           </Route>
-
-          <Route path='/about' element={ <About/>}>
-          </Route>
-
-          <Route path='/contact' element={ <Contact/>}>
-          </Route>
-          
-          <Route path='/add' element={ <AddProduct/>}>
-          </Route>
-
-          <Route path='/edit' element={ <EditdProduct/>}>
-          </Route>
+          <Route path='/about' element={<About/>}></Route>
+          <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/add' element={<AddProduct/>}></Route>
+          <Route path='/edit/:id' element={<EditProduct/>}></Route>
 
         </Routes>
       </BrowserRouter>
